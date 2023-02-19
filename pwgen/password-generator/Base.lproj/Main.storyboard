@@ -16,43 +16,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password goes here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efc-PJ-Dui">
-                                <rect key="frame" x="16" y="78" width="343" height="53"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password goes here" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Efc-PJ-Dui">
+                                <rect key="frame" x="42" y="167" width="291.5" height="41"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Src-wz-vhx">
-                                <rect key="frame" x="149" y="165" width="95" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Generate"/>
-                                <connections>
-                                    <action selector="doGenerate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Osi-db-3bv"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ioh-MP-Tmq">
-                                <rect key="frame" x="165" y="208" width="64" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Clear"/>
-                                <connections>
-                                    <action selector="doClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="swo-oU-Hf5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xz7-hq-1R7">
-                                <rect key="frame" x="153" y="251" width="87" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Settings"/>
-                                <connections>
-                                    <segue destination="TDl-kz-gAR" kind="show" identifier="toSettings" id="vD1-IN-Vgv"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vat-7Z-wZc">
+                                <rect key="frame" x="76.5" y="368" width="222" height="119.5"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Src-wz-vhx">
+                                        <rect key="frame" x="0.0" y="0.0" width="222" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Generate"/>
+                                        <connections>
+                                            <action selector="doGenerate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Osi-db-3bv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ioh-MP-Tmq">
+                                        <rect key="frame" x="0.0" y="42.5" width="222" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Clear"/>
+                                        <connections>
+                                            <action selector="doClear:" destination="BYZ-38-t0r" eventType="touchUpInside" id="swo-oU-Hf5"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xz7-hq-1R7">
+                                        <rect key="frame" x="0.0" y="85" width="222" height="34.5"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Settings"/>
+                                        <connections>
+                                            <segue destination="TDl-kz-gAR" kind="show" identifier="toSettings" id="vD1-IN-Vgv"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vat-7Z-wZc" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="1:3" id="0Jy-ty-CeW" userLabel="buttonWidth"/>
+                            <constraint firstItem="Efc-PJ-Dui" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="56t-hh-BaW" userLabel="passLabel HorizontalC"/>
+                            <constraint firstItem="Src-wz-vhx" firstAttribute="top" secondItem="Efc-PJ-Dui" secondAttribute="bottom" constant="160" id="7it-Bp-vxL" userLabel="PasstoGenerate"/>
+                            <constraint firstItem="Efc-PJ-Dui" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="123" id="Z9Z-wy-rAL" userLabel="PassTop"/>
+                            <constraint firstItem="Ioh-MP-Tmq" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="yzH-Os-uXm" userLabel="CenterButtons"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="wta-fa-YJS"/>
                     <connections>
@@ -71,51 +79,63 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="6" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="VJz-fb-xaL">
-                                <rect key="frame" x="215" y="116" width="118" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="8" minValue="6" maxValue="12" translatesAutoresizingMaskIntoConstraints="NO" id="VJz-fb-xaL">
+                                <rect key="frame" x="179" y="115.5" width="154" height="31"/>
                                 <connections>
                                     <action selector="sliderChanged:" destination="TDl-kz-gAR" eventType="valueChanged" id="g2z-C5-keD"/>
                                 </connections>
                             </slider>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password Length" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NX-mc-jrZ">
-                                <rect key="frame" x="16" y="120" width="154" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Password Length" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1NX-mc-jrZ">
+                                <rect key="frame" x="16" y="120" width="157" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use Numeric" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ee2-fT-qxy">
-                                <rect key="frame" x="16" y="169" width="177" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Use Numeric" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ee2-fT-qxy">
+                                <rect key="frame" x="16" y="169" width="157" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="peL-5B-a2m">
-                                <rect key="frame" x="217" y="164" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <action selector="numericToggled:" destination="TDl-kz-gAR" eventType="valueChanged" id="QKV-MC-OgT"/>
-                                </connections>
-                            </switch>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Use special char" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpU-bl-kPV">
-                                <rect key="frame" x="16" y="224" width="177" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Use special char" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpU-bl-kPV">
+                                <rect key="frame" x="16" y="224" width="154" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRX-eV-YzV">
-                                <rect key="frame" x="217" y="219" width="49" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JRX-eV-YzV">
+                                <rect key="frame" x="181" y="219" width="51" height="31"/>
                                 <connections>
                                     <action selector="specialToggled:" destination="TDl-kz-gAR" eventType="valueChanged" id="P8j-Da-h7l"/>
+                                </connections>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="peL-5B-a2m">
+                                <rect key="frame" x="181" y="164" width="51" height="31"/>
+                                <connections>
+                                    <action selector="numericToggled:" destination="TDl-kz-gAR" eventType="valueChanged" id="QKV-MC-OgT"/>
                                 </connections>
                             </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="GQf-b2-nhz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bpU-bl-kPV" firstAttribute="leading" secondItem="GQf-b2-nhz" secondAttribute="leading" constant="16" id="0rV-RB-jtm" userLabel="SpecialToLeftEdge"/>
+                            <constraint firstItem="JRX-eV-YzV" firstAttribute="leading" secondItem="peL-5B-a2m" secondAttribute="leading" id="8MV-gT-DS0" userLabel="Switch2Lead"/>
+                            <constraint firstItem="1NX-mc-jrZ" firstAttribute="top" secondItem="GQf-b2-nhz" secondAttribute="top" constant="76" id="ECH-Ng-rNl" userLabel="PassToTop"/>
+                            <constraint firstItem="peL-5B-a2m" firstAttribute="top" secondItem="VJz-fb-xaL" secondAttribute="bottom" constant="18.5" id="LEp-c1-D0r" userLabel="FirstSwitchToSec"/>
+                            <constraint firstItem="peL-5B-a2m" firstAttribute="leading" secondItem="VJz-fb-xaL" secondAttribute="leading" id="NlS-wi-WxG" userLabel="Switch1Lead"/>
+                            <constraint firstItem="1NX-mc-jrZ" firstAttribute="leading" secondItem="GQf-b2-nhz" secondAttribute="leading" constant="16" id="P3p-Z5-gfp" userLabel="PassToLeftEdge"/>
+                            <constraint firstItem="Ee2-fT-qxy" firstAttribute="centerY" secondItem="peL-5B-a2m" secondAttribute="centerY" id="PkK-Ff-Ql1" userLabel="NumCenterSwitch"/>
+                            <constraint firstItem="Ee2-fT-qxy" firstAttribute="leading" secondItem="GQf-b2-nhz" secondAttribute="leading" constant="16" id="QuD-SZ-Af2" userLabel="NumToLeftEdge"/>
+                            <constraint firstItem="GQf-b2-nhz" firstAttribute="trailing" secondItem="VJz-fb-xaL" secondAttribute="trailing" constant="44" id="eDW-P3-7Hc" userLabel="TrailingSpaceSlide"/>
+                            <constraint firstItem="VJz-fb-xaL" firstAttribute="top" secondItem="GQf-b2-nhz" secondAttribute="top" constant="71.5" id="f9s-8K-shb" userLabel="SliderToTop"/>
+                            <constraint firstItem="1NX-mc-jrZ" firstAttribute="centerY" secondItem="VJz-fb-xaL" secondAttribute="centerY" id="gTo-aG-F80" userLabel="PassSliderCenter"/>
+                            <constraint firstItem="bpU-bl-kPV" firstAttribute="top" secondItem="Ee2-fT-qxy" secondAttribute="bottom" constant="34" id="isN-rV-ZDp" userLabel="SpecialToNum"/>
+                            <constraint firstItem="Ee2-fT-qxy" firstAttribute="top" secondItem="1NX-mc-jrZ" secondAttribute="bottom" constant="28" id="nG3-6m-82q" userLabel="NumtoPass"/>
+                            <constraint firstItem="JRX-eV-YzV" firstAttribute="top" secondItem="peL-5B-a2m" secondAttribute="bottom" constant="24" id="st2-eA-8aP" userLabel="SecSwitchToFirstSwitch"/>
+                            <constraint firstItem="VJz-fb-xaL" firstAttribute="width" secondItem="jcJ-C8-FBK" secondAttribute="width" multiplier="2:5" id="vPy-Yn-EwH" userLabel="WidthSlider"/>
+                            <constraint firstItem="bpU-bl-kPV" firstAttribute="centerY" secondItem="JRX-eV-YzV" secondAttribute="centerY" id="zqb-VH-ogK" userLabel="SpecialSwitchCenter"/>
+                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="ciF-DT-gJJ">
@@ -140,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xCz-Pq-Hs7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1779.3893129770991" y="-29.577464788732396"/>
+            <point key="canvasLocation" x="1778.4000000000001" y="-30.134932533733135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ZDT-3O-2PM">
